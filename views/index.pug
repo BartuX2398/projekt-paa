@@ -1,6 +1,18 @@
 extends layout
 
 block content
+table
+    tr
+      th(scope= "col") Tytuł
+    each task in tasks
+      tr
+        td= task.title
+
+
+
+
+
+
   form(action="/tasks/add", method="post")
     label(for="title")
       | Tytuł
